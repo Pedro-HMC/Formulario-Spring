@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Página de Publicação</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 7em;">
+            <div class="col"></div>
+            <div class="col-">
+                <h1>Formulário</h1>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row" style="margin-top: 1em;">
+            <div align="center" class="col"><img src="bonec.jpg"></div>
+            <div class="col-">
+                <form action="#" th:action="@{/formulario}" th:object="${formulario}" method="post">
+                    <p style="text-align: center;"> Titulo:<br> <input type="text" th:field="*{titulo}" />
+                    </p>
+                    <p style="text-align: center;"> Texto:<br> <input type="text" th:field="*{texto}" />
+                    </p>
+                    <p style="text-align: center;"><input type="submit" value="Enviar" /></p>
+                </form>
+            </div>
+            <div align="center" class="col"><img src="boneco.jpg"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-">
+                <button style="margin-right: 18px;"><a href="/formulario">Reset</a></button>
+            </div>
+
+            <div class="col-">
+                <button><a href="/page0">Página Inicial</a></button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+
+</html>

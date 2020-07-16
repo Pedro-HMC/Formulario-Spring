@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Preencha seu formulário</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="#" th:action="@{/formulario}" th:object="${formulario}" method="post">
+        <p>Nome: <input type="text" th:field="*{nome}" /></p>
+        <p>Idade: <input type="text" th:field="*{idade}" /></p>
+        <p><input type="submit" value="Enviar" /></p> <a href="/formulario">Cabou</a>
+    </form>
+</body>
+
+</html>
